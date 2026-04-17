@@ -43,6 +43,18 @@ int main() {
 
 
 
+/*
+
+Time Complixity:O(n)
+Space Complixity:O(1)
+
+
+*/
+
+
+
+
+
 
 
 
