@@ -47,3 +47,6 @@ int main() {
     cout << result << endl;
     return 0;
 }
+
+// Time Complexity: O(log n)
+// Space Complexity: O(1)
