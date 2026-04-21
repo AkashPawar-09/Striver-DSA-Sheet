@@ -89,3 +89,6 @@ Then queries → O(1) lookup each
 Total → O(n + q) (very efficient)
 
 */
+
+// Time Complexity: O(n + q)
+// Space Complexity: O(n)

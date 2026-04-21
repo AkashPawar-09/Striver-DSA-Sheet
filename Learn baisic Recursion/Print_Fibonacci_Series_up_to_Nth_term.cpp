@@ -12,29 +12,27 @@ Output: 3
 Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
 */
 
-
 #include<bits/stdc++.h>
-using namespace std ;
+using namespace std;
 
 class Solution {
 public:
     int fib(int n) {
-        
+        if (n <= 1) return n;
+        return fib(n - 1) + fib(n - 2);
     }
 };
 
-
-
 int main() {
     int n;
-    cin >> n ;
+    cin >> n;
 
-    Solution obj; 
-    obj.fib(n); 
+    Solution obj;
+    cout << obj.fib(n);   // print result
 
     return 0;
 }
 
 
-
-
+// Time Complexity: O(2ⁿ)
+// Space Complexity: O(n)
