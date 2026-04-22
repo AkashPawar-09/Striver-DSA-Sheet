@@ -1,4 +1,4 @@
-Striver DSA Sheet Solutions
+Hi there! 
+I’m currently on a journey to master Data Structures & Algorithms by consistently solving problems from the Striver SDE Sheet.
 
-Welcome to my repository for solving the Striver DSA Sheet 💻
-This repo contains my structured solutions to all problems from the sheet, along with approaches and optimizations.
+This repository is not just a collection of solutions—it's a reflection of my discipline, consistency, and growth mindset as I prepare for technical interviews and real-world problem solving.
