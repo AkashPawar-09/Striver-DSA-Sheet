@@ -33,14 +33,15 @@ class Solution {
 public:
     int secondLargestElement(vector<int>& nums) {
         
-        int largest = INT_MIN, second = INT_MIN;
+        int largest = INT_MIN;
+        int second = INT_MIN;
 
-        for (int num : nums) {
-            if (num > largest) {
+        for (int x : nums) {
+            if (x > largest) {
                 second = largest;
-                largest = num;
-            } else if (num > second && num != largest) {
-                second = num;
+                largest = x;
+            } else if (x > second && x != largest) {
+                second = x;
             }
             
         }
@@ -67,4 +68,3 @@ int main () {
 
 // Time Complexity = O(n)
 // Space Complexity = O(1)
- 
