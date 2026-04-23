@@ -49,19 +49,6 @@ public:
     }
 };
 
-/*
-for (int num : nums) {
-            if (num > largest) {
-                second = largest;
-                largest = num;
-            } else if (num > second && num != largest) {
-                second = num;
-            }
-        }
-
-        return (second == INT_MIN) ? -1 : second;
-        */
-
 
 int main () {
     int n ; 
@@ -78,4 +65,6 @@ int main () {
     return 0 ;
 }
 
-
+// Time Complexity = O(n)
+// Space Complexity = O(1)
+ 
