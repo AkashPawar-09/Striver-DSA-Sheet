@@ -29,23 +29,51 @@ Explanation: No subarray with sum = 5 is present in arr[].
 
 */
 
-#include<bits/stdc++.h>
-using namespace std ;
 
-class Solution{
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
 public:
-    int longestSubarray(vector<int> &nums, int k){
+    int longestSubarray(vector<int> &nums, int k) {
         
+        int n = nums.size();
+        int maxLen = 0;
+
+        for (int i = 0; i < n; i++) {                       // takes starting index
+
+            for (int j = i; j < n; j++) {                   // takes ending index
+
+                int sum = 0;                                // sum = 0 Used for 2nd loop
+
+                for (int x = i; x <= j; x++) {              // calculate sum of subarray : nums[i to j]
+                    sum += nums[x];
+                }
+
+                if (sum == k) {                             // check if sum equals k
+                    maxLen = max(maxLen, j - i + 1);        // Updation Of maxLen by each subarray 
+                }
+            }
+        }
+
+        return maxLen;
     }
 };
 
+int main() {
+    int n, k;
+    cin >> n;
 
-int main () {
-    int n ; 
-    cin >> n ; 
+    vector<int> nums(n);
+    for (int i = 0; i < n; i++) cin >> nums[i];
 
-    int k ; 
-    cin >> k ;
+    cin >> k;
 
-    
+    Solution obj;
+    cout << obj.longestSubarray(nums, k);
+
+    return 0;
 }
+
+// Time Complexity : O(n³)
+// Space Complexity : O(1)
