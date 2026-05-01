@@ -1,6 +1,6 @@
-/*
+/* 
 
-LeetCode Que No. ->        1. Two Sum
+// LeetCode 1. Two Sum
 
 Input: N = 5, arr[] = {2,6,5,8,11}, target = 14
 Output : YES
