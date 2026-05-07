@@ -1,40 +1,24 @@
 /*
 
-Input: nums = [-3, 4, 5, 1, -4, -5]
-Output: [5, 1, -4, -5]
-Explanation: -5 is the rightmost element, -4 is the largest element in the index range [4, 5], 
-1 is the largest element in the index range [3, 5] and 5 is the largest element in the range [2, 5]
+Input: nums = [100, 4, 200, 1, 3, 2]
+Output: 4
+Explanation: The longest sequence of consecutive elements in the array is [1, 2, 3, 4], which has a length of 4. 
+This sequence can be formed regardless of the initial order of the elements in the array.
 
-Input: arr = [10, 22, 12, 3, 0, 6]  
-Output: 22 12 6  
-Explanation: 6 is a leader because there are no elements after it.  
-12 is greater than all the elements to its right (3, 0, 6), and 22 is greater than 12, 3, 0, 6, 
-making them leaders as well.
+Input: nums = [0, 3, 7, 2, 5, 8, 4, 6, 0, 1]
+Output: 9
+Explanation: The longest sequence of consecutive elements in the array is [0, 1, 2, 3, 4, 5, 6, 7, 8], which has a length of 9. 
 
-Input: arr[] = [16, 17, 4, 3, 5, 2]
-Output: [17 5 2]
-Explanation: 17 is greater than all the elements to its right i.e., [4, 3, 5, 2], 
-therefore 17 is a leader. 5 is greater than all the elements to its right i.e., [2], therefore 5 is a leader.
-2 has no element to its right, therefore 2 is a leader.
+Input: arr[] = [2, 6, 1, 9, 4, 5, 3]
+Output: 6
+Explanation:  The longest consecutive subsequence [2, 6, 1, 4, 5, 3].
 
-Input: arr[] = [1, 2, 3, 4, 5, 2]
-Output: [5 2]
-Explanation: 5 is greater than all the elements to its right i.e., [2], therefore 5 is a leader. 
-2 has no element to its right, therefore 2 is a leader.
-
-Input: arr = [10, 4, 2, 4, 1]
-Output: [10, 4, 4, 1]
-Explanation: Note that both of the 4s are in output, as to be a leader an equal element is also allowed on the right. side
-
-Input: arr = [30, 10, 10, 5]
-Output: [30, 10, 10, 5]
-Explanation: When an array is sorted in non-increasing order, all elements are leaders.
-
-Input: arr = [5, 10, 20, 40]
-Output: [40]
-Explanation: When an array is sorted in increasing order, only the rightmost element is leader.
+Input: arr[] = [1,1,1,2,2,3]
+Output: 3
+Explanation: The subsequence [1, 2,3] is the longest subsequence of consecutive elements
 
 */
+
 
 #include<bits/stdc++.h>
 using namespace std ;
