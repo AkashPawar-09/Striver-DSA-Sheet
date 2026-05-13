@@ -22,11 +22,6 @@ Explanation: [3,2,1] is the last permutation. So we return the first: [1,2,3].
 #include<bits/stdc++.h>
 using namespace std ;
 
-
-#include<bits/stdc++.h>
-using namespace std;
-
-
 class Solution {
 public:
     void nextPermutation(vector<int>& nums) {
