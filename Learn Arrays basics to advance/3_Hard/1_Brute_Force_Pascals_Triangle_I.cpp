@@ -77,5 +77,5 @@ int main() {
 }
 
 
-// Time Complextiy :
-// Space Complexity : 
+// Time Complextiy : O(N²)
+// Space Complexity : O(N²)
