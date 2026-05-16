@@ -1,4 +1,15 @@
-Hi there! 
-I’m currently on a journey to master Data Structures & Algorithms by consistently solving problems from the Striver SDE Sheet.
+# 🚀 Striver-DSA-Sheet
 
-This repository is not just a collection of solutions—it's a reflection of my discipline, consistency, and growth mindset as I prepare for technical interviews and real-world problem solving.
+This repository contains my solutions to the **Striver SDE Sheet** in **C++**.  
+I'm using this journey to improve my **problem-solving skills**, strengthen my understanding of **Data Structures & Algorithms**, and prepare for technical interviews.
+
+## 📚 Topics Covered
+- Arrays
+- Sorting
+- Recursion
+- Hashing
+- Basic Maths
+- More coming soon...
+
+## 🎯 Goal
+Consistent learning, clean code, and continuous improvement. 🚀
