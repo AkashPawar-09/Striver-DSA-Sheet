@@ -1,15 +1,9 @@
-# 🚀 Striver-DSA-Sheet
+# 🚀 LeetCode
 
-This repository contains my solutions to the **Striver SDE Sheet** in **C++**.  
-I'm using this journey to improve my **problem-solving skills**, strengthen my understanding of **Data Structures & Algorithms**, and prepare for technical interviews.
-
-## 📚 Topics Covered
-- Arrays
-- Sorting
-- Recursion
-- Hashing
-- Basic Maths
-- More coming soon...
+This repository contains my daily **LeetCode** problem solutions in **C++**.  
+I'm using this journey to improve my **problem-solving skills**, strengthen my understanding of **Data Structures & Algorithms**, and stay consistent with coding practice.
 
 ## 🎯 Goal
-Consistent learning, clean code, and continuous improvement. 🚀
+Daily consistency, clean code, and continuous improvement. 💻🔥
+
+> “Consistency beats intensity.” 🚀
