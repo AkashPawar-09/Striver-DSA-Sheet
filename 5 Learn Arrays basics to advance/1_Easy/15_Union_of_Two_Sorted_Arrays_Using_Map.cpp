@@ -31,22 +31,22 @@ class Solution {
 public:
     vector<int> unionArray(vector<int>& nums1, vector<int>& nums2) {
         
-        map<int, int> freq;   // stores frequency (also keeps keys sorted)
-        vector<int> Union;    // result vector
+        map<int, int> freq;         // stores frequency (also keeps keys sorted)
+        vector<int> ans_vector;     // answer vector
 
-        for (int x : nums1) {
-            freq[x]++;              // Insert elements of nums1
+        for (int x : nums1) {       // Insert elements of nums1
+            freq[x]++;              // increase frequency of DISTINCT element
         }
 
-        for (int x : nums2) {
-            freq[x]++;              // Insert elements of nums2
+        for (int x : nums2) {       // Insert elements of nums1
+            freq[x]++;              // increase frequency of DISTINCT element
         }
 
-        for (auto &it : freq) {
-            Union.push_back(it.first);      // Collect unique elements (keys are already sorted)
+        for (auto &it : freq) {                 // loop on elements in frequency map ( map<int,int> freq )
+            ans_vector.push_back(it.first);     // Collect all unique elements from key not frquencies
         }
 
-        return Union;
+        return ans_vector;          // return ans_vector
     }
 };
 

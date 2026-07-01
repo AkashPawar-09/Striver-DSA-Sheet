@@ -37,43 +37,47 @@ public:
 
         while (i < nums1.size() && j < nums2.size()) {
 
-            if (i > 0 && nums1[i] == nums1[i - 1]) {
-                i++;
-                continue;
+            if (i > 0 && nums1[i] == nums1[i - 1]) {    // if duplicate found in nums1
+                i++;                                    // i++
+                continue;                               // continue this iteration
             }
 
-            if (j > 0 && nums2[j] == nums2[j - 1]) {
-                j++;
-                continue;
+            if (j > 0 && nums2[j] == nums2[j - 1]) {    // if duplicate found in nums2
+                j++;                                    // j++
+                continue;                               // continue this iteration
             }
 
-            if (nums1[i] < nums2[j]) {
-                Union.push_back(nums1[i]);
-                i++;
+            if (nums1[i] < nums2[j]) {                  // if element in nums1 is smaller then nums2
+                Union.push_back(nums1[i]);              // push_back it in answer vector
+                i++;                                    // i++
             }
-            else if (nums1[i] > nums2[j]) {
-                Union.push_back(nums2[j]);
-                j++;
+
+            else if (nums1[i] > nums2[j]) {             // if element in nums2 is smaller then nums1
+                Union.push_back(nums2[j]);              // push_back it in answer vector
+                j++;                                    // j++
             }
-            else {
-                Union.push_back(nums1[i]);
-                i++;
-                j++;
+
+            else {                                      // if anything not happens in above conditions
+                Union.push_back(nums1[i]);              // then push_back 1st element of nums1       
+                i++;                                    // i++
+                j++;                                    // j++
             }
         }
 
-        while (i < nums1.size()) {
-            if (i == 0 || nums1[i] != nums1[i - 1]) {
-                Union.push_back(nums1[i]);
+        // after completing above loop , cheak is there any element left in nums1 , add it in answer vector
+        while (i < nums1.size()) {                      // until i < n
+            if (i == 0 || nums1[i] != nums1[i - 1]) {   // if NOT a duplicate (first occurrence)
+                Union.push_back(nums1[i]);              // add it in answer vector
             }
-            i++;
+            i++;                                        // i++
         }
 
-        while (j < nums2.size()) {
-            if (j == 0 || nums2[j] != nums2[j - 1]) {
-                Union.push_back(nums2[j]);
+        // after completing above loop , cheak is there any element left in nums2 , add it in answer vector
+        while (j < nums2.size()) {                      // until i < n
+            if (j == 0 || nums2[j] != nums2[j - 1]) {   // if NOT a duplicate (first occurrence)
+                Union.push_back(nums2[j]);              // add it in answer vector
             }
-            j++;
+            j++;                                        // j++ 
         }
 
         return Union;
