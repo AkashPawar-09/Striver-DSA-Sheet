@@ -31,10 +31,10 @@ public:
     void rotateArray(vector<int>& nums, int k) {
         int n = nums.size();    // size of nums
         if (n == 0) {           // if empty return 
-            return ;
+            return ;            // then retuen
         }
 
-        k = k % n;          // 
+        k = k % n;              // if k > n then k will be reset from start 
 
         vector<int> vec(n) ; 
 

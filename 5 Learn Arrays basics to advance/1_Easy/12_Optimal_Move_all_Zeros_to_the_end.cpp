@@ -26,11 +26,11 @@ using namespace std ;
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
-        int j = 0;
-        for (int i = 0; i < nums.size(); i++) {
-            if (nums[i] != 0) {
-                swap(nums[i], nums[j]);
-                j++;
+        int j = 0;                                      // index j = 0 
+        for (int i = 0; i < nums.size(); i++) {         // iteration over vector nums
+            if (nums[i] != 0) {                         // if element is not zero
+                swap(nums[i], nums[j]);                 // swap it and give it starting index
+                j++;                                    // if swapped give j next index
             }
         }
     }

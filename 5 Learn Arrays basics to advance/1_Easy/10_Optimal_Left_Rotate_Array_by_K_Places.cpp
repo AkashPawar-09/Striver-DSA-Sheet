@@ -14,15 +14,15 @@ using namespace std ;
 
 class Solution {
 public:
-    void rotateArray(vector<int>& nums, int k) {
-        int n = nums.size();
-        if (n == 0) return;
+    void rotateArray(vector<int>& nums, int k) {    // eg. [1, 2, 3, 4, 5, 6]   ,k=8
+        int n = nums.size();                        // n = 6
+        if (n == 0) return;     
 
-        k = k % n;
+        k = k % n;                                  // k = 8 % 6 = 2   ------>  i.e. k = 2
 
-        reverse(nums.begin(), nums.begin() + k);
-        reverse(nums.begin() + k, nums.end());
-        reverse(nums.begin(), nums.end());
+        reverse(nums.begin(), nums.begin() + k);    // [2, 1, 3, 4, 5, 6]
+        reverse(nums.begin() + k, nums.end());      // [2, 1, 6, 5, 4, 3]
+        reverse(nums.begin(), nums.end());          // [3, 4, 5, 6, 1, 2]
     }
 };
 

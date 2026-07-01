@@ -32,17 +32,26 @@ public:
         int count = 0 ;
 
         for (int x : nums) {
-            if (x == 0) count++;
+            if (x == 0) count++;                // count zeros
         }
 
-        nums.erase(remove(nums.begin(), nums.end(), 0), nums.end());
+        nums.erase(remove(nums.begin(), nums.end(), 0), nums.end()); // remove zeros from nums
 
         for (int i = 0; i < count; i++) {
-            nums.emplace_back(0);
+            nums.emplace_back(0);               // add removed number of zeros at last of array
         }
-        nums ;
+        nums ;                                  // return given array nums (void = no return keyword)
     }
 };
+
+/* --------------------------------- Why you need BOTH (erase & remove) ---------------------------------
+remove alone → wrong size, garbage values at the tail, zeros not truly gone.
+erase alone (without remove) → you'd need to know exact positions of zeros to erase them, 
+and erasing one-by-one from the middle is O(n) per erase (shifts everything), making it O(n²) overall.
+
+// Combining them (erase-remove idiom) gives you O(n) total: one pass to compact, one pass to truncate.
+-------------------------------------------------------------------------------------------------------*/
+
 
 
 int main() {
