@@ -21,6 +21,7 @@ Explanation: There are two consecutive 1's in the array.
 #include<bits/stdc++.h>
 using namespace std ;
 
+
 class Solution {
 public:
     int findMaxConsecutiveOnes(vector<int>& nums) {
@@ -39,6 +40,43 @@ public:
         return max_count ;
     }
 };
+
+
+
+
+
+/*
+
+class Solution {
+public:
+    int findMaxConsecutiveOnes(vector<int>& nums) {
+        int n = nums.size();
+        if (n == 0) return 0;
+        int count = (nums[0] == 1) ? 1 : 0;             // if 1st element is 1 then count is 1 , otherwise 0
+        int maxCount = count;                           // maxcount is initially count
+        for (int i = 1; i < n; i++) {                   // iteration on elements of nums from 2nd element to last
+            if (nums[i] == 1 && nums[i - 1] == 1) {     // if previous and current elements both are 1
+                count++;                                // then increase count 
+            }
+            else if (nums[i] == 1) {                    // if not consecutive not found then this condition 
+                count = 1;                              // if any element is 1 then count is 1
+            }
+            else {                                      // if not any 1 found 
+                count = 0;                              // then count is 0
+            }
+
+            maxCount = max(maxCount, count);            // maxCount is maximum between maxCount & count
+        }
+
+        return maxCount;                                // return maximum count
+    }
+};
+
+*/
+
+
+
+
 
 int main () {
     int n;
