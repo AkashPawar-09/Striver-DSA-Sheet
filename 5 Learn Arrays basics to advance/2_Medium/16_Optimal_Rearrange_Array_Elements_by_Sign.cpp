@@ -28,21 +28,23 @@ class Solution {
 public:
     vector<int> rearrangeArray(vector<int>& nums) {
         int n = nums.size();
-        vector<int> ans_nums(n);
-        vector<int> positive;                                       // new vector to store positive
-        vector<int> negative;                                       // new vector to store negative 
+        vector<int> ans(n);
 
-        for (int i = 0; i < n; i++) {                               // iteration to seprate positive 
-            if (nums[i] > 0) positive.push_back(nums[i]);           // seprate positive
-            else negative.push_back(nums[i]);                       // seprate negative
+        int positiveIndex = 0;
+        int negativeIndex = 1;
+
+        for (int x : nums) {                    // cheak every number in nums
+
+            if (x > 0) {                        // if element is positive
+                ans[positiveIndex] = x;         // add it to correct positive index 
+                positiveIndex += 2;             // increment to next positive index
+            }
+            else {                              // else : if element is negative 
+                ans[negativeIndex] = x;         // add it to correct negative index 
+                negativeIndex += 2;             // increment to next negative index
+            }
         }
-
-        for (int j = 0; j < n / 2; j++) {                           // iteration from i = 0 to i = n/2
-            ans_nums[2 * j] = positive[j];                          // store positive numbers in new array
-            ans_nums[2 * j + 1] = negative[j];                      // store negative numbers in new array
-        }
-
-        return ans_nums;                                            // return new array
+        return ans;                             // return answer vector
     }
 };
 

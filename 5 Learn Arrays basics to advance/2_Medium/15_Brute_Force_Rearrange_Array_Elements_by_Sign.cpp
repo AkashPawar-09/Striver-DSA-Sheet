@@ -28,18 +28,18 @@ class Solution {
 public:
     vector<int> rearrangeArray(vector<int>& nums) {
         int n = nums.size();                                // size of nums array
-        vector<int> ans_nums(n);                            // returning array
-        vector<int> positive;                               // positive array
+        vector<int> ans_nums(n);                            // returning array (answer array)
+        vector<int> positive;                               // positive array 
         vector<int> negative;                               // negativr array
 
         for (int i = 0; i < n; i++) {                       // iterations through i = 0 to n 
-            if (nums[i] > 0) positive.push_back(nums[i]);   // seprate positive
-            else negative.push_back(nums[i]);               // seprate negative
+            if (nums[i] > 0) positive.push_back(nums[i]);   // seprate positive numbers and store in +ve array
+            else negative.push_back(nums[i]);               // seprate negative numbers and store in -ve array
         }
 
         for (int j = 0; j < n / 2; j++) {                   // iterations through j = 0 to n to stre in new array
-            ans_nums[2 * j] = positive[j];                  // store positive 
-            ans_nums[2 * j + 1] = negative[j];              // store negative 
+            ans_nums[2 * j] = positive[j];                  // store positive number using index = 2n
+            ans_nums[2 * j + 1] = negative[j];              // store negative number uding index = 2n+1
         }
 
         return ans_nums;                                    // return new array

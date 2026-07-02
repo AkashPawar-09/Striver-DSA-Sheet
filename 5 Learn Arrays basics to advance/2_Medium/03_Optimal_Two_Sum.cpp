@@ -10,7 +10,7 @@ Input: N = 5, arr[] = {2,6,5,8,11}, target = 15
 Output : NO.
 Explanation: There exist no such two numbers whose sum is equal to the target. 
 
-Leetcode ( I/P , O/P )
+
 Input: nums = [1, 6, 2, 10, 3], target = 7
 Output: [0, 1]
 Explanation: nums[0] + nums[1] = 1 + 6 = 7
@@ -44,7 +44,7 @@ public:
 
 /*       Que.     nums = [2, 1, 5, 3], target = 4
 
-i  | num | needed | found?             | action       | mp
+ i | num | needed | found?             | action       | mp
 ---|-----|--------|--------------------|--------------|-------------------
  - |  -  |   -    |   -                |      -       | {}
  0 |  2  |   2    | mp[2]?  → No       | mp[2] = 0    | {2:0}
