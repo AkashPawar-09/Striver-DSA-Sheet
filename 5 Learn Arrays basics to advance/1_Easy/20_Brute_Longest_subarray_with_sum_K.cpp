@@ -51,8 +51,8 @@ public:
                 }
 
                 if (sum == k) {                             // check if sum equals k
-                    maxLen = max(maxLen, j - i + 1);        // Updation Of maxLen by each subarray 
-                }
+                    maxLen = max(maxLen, j-i+1 );           // Updation Of maxLen by each subarray 
+                }   // here j-i-1 is the length of current subarray & update it everytime
             }
         }
 

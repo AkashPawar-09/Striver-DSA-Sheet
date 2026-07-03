@@ -48,7 +48,7 @@ class Solution {
 
                 if (sum == k) {
                     maxLen = max(maxLen, j - i + 1);
-                }
+                }   // here j-i-1 is the length of current subarray & update it everytime
             }
         }
 
