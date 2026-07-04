@@ -43,19 +43,19 @@ class Solution {
 public:
     vector<int> leaders(vector<int>& nums) {
 
-        vector<int> res;
+        vector<int> res;                        // Stores all leader elements
         int n = nums.size();
 
         for (int i = 0; i < n; i++) {
             int j;
             for (j = i + 1; j < n; j++) {
-                if (nums[i] < nums[j]) {
-                    break;
+                if (nums[i] < nums[j]) {        // if any next number is grater
+                    break;                      // Stop checking further
                 }
             }
-            if (j == n) {
-                res.push_back(nums[i]);
-            }
+            if (j == n) {                       // if j goes to n without cheaking 
+                res.push_back(nums[i]);         // then add it to answer vector
+            }   // this if also adds last element without executing above loop
         }
         return res;
     }

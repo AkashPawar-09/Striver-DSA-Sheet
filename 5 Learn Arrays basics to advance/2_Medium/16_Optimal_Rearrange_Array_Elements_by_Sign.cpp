@@ -28,7 +28,8 @@ class Solution {
 public:
     vector<int> rearrangeArray(vector<int>& nums) {
         int n = nums.size();
-        vector<int> ans(n);
+
+        vector<int> ans(n);                     // created answer vector
 
         int positiveIndex = 0;
         int negativeIndex = 1;

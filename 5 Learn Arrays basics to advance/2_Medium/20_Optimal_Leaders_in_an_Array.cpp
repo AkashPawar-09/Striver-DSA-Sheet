@@ -42,17 +42,17 @@ using namespace std ;
 class Solution {
 public:
     vector<int> leaders(vector<int>& nums) {
-        vector<int> res; 
+        vector<int> res;                        // creating answer vector
         int n = nums.size();
-        int maxRight = nums[n - 1]; 
-        res.push_back(maxRight); 
-        for (int i = n - 2; i >= 0; i--) {
-            if (nums[i] >= maxRight) {
-                maxRight = nums[i]; 
-                res.push_back(maxRight); 
+        int maxRight = nums[n - 1];             // rightmost element
+        res.push_back(maxRight);                // added rightmost element in answer vector
+        for (int i = n - 2; i >= 0; i--) {      // loop from 2nd last element to first
+            if (nums[i] >= maxRight) {          // if right is smalller than left 
+                maxRight = nums[i];             // then update right to current number
+                res.push_back(maxRight);        // then add that right number to answer vector
             }
         }
-        reverse(res.begin(), res.end());
+        reverse(res.begin(), res.end());        // to maintain order(ascending)
         return res; 
     }
 };
