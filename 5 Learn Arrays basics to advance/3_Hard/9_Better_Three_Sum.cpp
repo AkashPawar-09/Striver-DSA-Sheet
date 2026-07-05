@@ -29,17 +29,18 @@ public:
         vector<vector<int>> ans ;                               // create 2D vector to return output
         set<vector<int>> row;                                   // create set to avoid duplicate vector row
 
-        for (int i = 0 ; i < n ; i++) {                         // iteration from 1st element
-            set<int>seen ;                                      // reject duplicate triplets || everytime empty in new loop
-            for (int j = i+1 ; j < n ; j++){                    // iteration from 2nd element    
-                    int k ;                                     // third element in element vector (triplet)
-                    k = nums[i] + nums[j] ;                     // calculate the required value of k 
+        for (int i = 0 ; i < n ; i++) {             // iteration from 1st element
+            set<int>seen ;                          // stores visited elements for the current i to find the required third element
+            for (int j = i+1 ; j < n ; j++){        // iteration from 2nd element    
+                    int k ;                         // stores the required third value to make the sum zero
+                    k = nums[i] + nums[j] ;         // calculate sum of first two elements
                     // here k is required third element in triplet which we gonna find out 
                     // used formula is nums[i] + nums[j] + nums[k] == 0 (i.e. nums[i]+nums[j] = { - nums[k] } )
+                    // Required value = -(nums[i] + nums[j])
                     k = (-1) * k ;                              // making k in negative k 
 
                     if(seen.find(k) != seen.end()){             // cheaks element k already exists or not in seen set
-                        // if element k not found
+                        // if the required value already exists in seen 
                         vector<int>element;                     // create a elemenet vector 
 
                         element.push_back(nums[i]) ;            // push_back 1st element
@@ -52,6 +53,8 @@ public:
                         row.insert(element) ;                   // insert element set in row
                     }
                     seen.insert(nums[j]);
+                    // seen stores all the numbers that have already been visited in the current inner loop.
+                    // So seen always contains the previous nums[j] values encountered during the current outer loop iteration.
                 }
             }
         for(auto it : row) {                                    // iteration for inserting element in row
