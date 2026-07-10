@@ -260,34 +260,28 @@ O(log n)
 13. Space Complexity
 
 Iterative Binary Search
-
 O(1)
 
 Recursive Binary Search
-
 O(log n)
-
 because of recursion stack.
 
 --------------------------------------------------------------------------------------------------------------------------
 14. Binary Search on Descending Array
 
 Ascending
-
 target > nums[mid]
-
 move right
 
 Descending
-
 target > nums[mid]
-
 move left
 
 Conditions reverse.
 
 --------------------------------------------------------------------------------------------------------------------------
 15. Recursive Binary Search
+
 int binarySearch(vector<int>& nums,int low,int high,int target){
 
     if(low>high)
@@ -308,31 +302,29 @@ int binarySearch(vector<int>& nums,int low,int high,int target){
 16. Overflow Problem
 
 Avoid
-
 int mid=(low+high)/2;
 
 Suppose
-
 low = 2,000,000,000
-
 high = 2,000,000,001
 
 Adding them exceeds the range of int.
 
-Correct
-
-int mid=low+(high-low)/2;
+Correct : int mid=low+(high-low)/2;
 
 Used in interviews.
 
 --------------------------------------------------------------------------------------------------------------------------
 17. Binary Search Conditions
+
 Found
 nums[mid]==target
 Search Right
 target>nums[mid]
 Search Left
 target<nums[mid]
+
+--------------------------------------------------------------------------------------------------------------------------
 18. Common Mistakes
 
 Using
@@ -363,6 +355,7 @@ Applying Binary Search on an unsorted array.
 
 --------------------------------------------------------------------------------------------------------------------------
 19. Binary Search Variants
+
 Standard Binary Search
 Lower Bound
 Upper Bound
@@ -388,6 +381,8 @@ Capacity to Ship Packages
 Split Array Largest Sum
 Median of Two Sorted Arrays
 Matrix Binary Search
+
+--------------------------------------------------------------------------------------------------------------------------
 20. Binary Search on Answer
 
 Sometimes the answer is not present in the array. 
@@ -402,14 +397,21 @@ Painter's Partition
 Capacity to Ship Packages
 Split Array Largest Sum
 Minimize Maximum Distance to Gas Station
-21. LeetCode Problems (Easy → Hard)
+
+--------------------------------------------------------------------------------------------------------------------------
+21. LeetCode Problems (Easy → Hard)                             |
+-----------------------------------------------------------------
 Easy
+
 Binary Search
 Search Insert Position
 Sqrt(x)
 First Bad Version
 Guess Number Higher or Lower
+
+-----------------------------------------------------------------
 Medium
+
 Find First and Last Position
 Search in Rotated Sorted Array
 Search in Rotated Sorted Array II
@@ -419,9 +421,14 @@ Single Element in a Sorted Array
 Koko Eating Bananas
 Capacity to Ship Packages Within D Days
 Find the Smallest Divisor Given a Threshold
+
+-----------------------------------------------------------------
 Hard
+
 Median of Two Sorted Arrays
 Split Array Largest Sum
+
+--------------------------------------------------------------------------------------------------------------------------
 22. Binary Search Pattern
 
 Whenever you see these words in a problem, think of Binary Search:
@@ -436,11 +443,9 @@ Largest
 Answer lies in a range
 Can we do it in O(log n)?
 Monotonic condition (true/false changes only once)
-23. Complete Binary Search Roadmap
----
 
 --------------------------------------------------------------------------------------------------------------------------
-# 23. Complete Binary Search Roadmap
+23. Complete Binary Search Roadmap
 
 1. Binary Search Basics
         │
