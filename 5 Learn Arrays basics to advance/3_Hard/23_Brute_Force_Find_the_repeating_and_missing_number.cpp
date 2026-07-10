@@ -27,50 +27,39 @@ using namespace std ;
 class Solution {
 public:
     vector<int> findMissingRepeatingNumbers(vector<int> nums) {
-        int n = nums.size();                        // Store the size of the array.
-        sort(nums.begin(), nums.end());             // Sort the array so duplicate and missing number are easier to find.
 
-        int firstElement = -1;                      // firstElement will store the repeating number. Initialize with -1.
-        int secondElement = -1;                     // secondElement will store the missing number. Initialize with -1.
-        vector<int> ans;                            // Vector to store the final answer.
+        int n = nums.size();                        // Size of the array.
 
-        for (int i = 0; i < n - 1; i++) {           // Traverse till the second-last element.
-            if (nums[i] == nums[i + 1]) {           // If two adjacent elements are equal
-                firstElement = nums[i];             // then this is the repeating number.
-                break;                              // No need to continue searching.
-            }
-        }
+        int repeating = -1;                         // Stores the repeating number.
+        int missing = -1;                           // Stores the missing number.
 
-        if (nums[0] != 1) {                         // If the first element is not 1
-            secondElement = 1;                      // then 1 is the missing number.
-        }
-        else {                                      // Otherwise, search for the missing number.
-            for (int i = 0; i < n - 1; i++) {       // Traverse the sorted array.
-                
-                if (nums[i] == nums[i + 1])         // If current and next elements are equal...
-                    continue;                       // ...skip the duplicate and move to the next iteration.
+        for (int i = 1; i <= n; i++) {              // Check every number from 1 to n.
 
-                if (nums[i] + 1 != nums[i + 1]) {   // If the next number is not exactly current + 1...
-                    secondElement = nums[i] + 1;    // ...then current + 1 is the missing number.
-                    break;                          // Missing number found, exit the loop.
+            int count = 0;                          // Count frequency of current number.
+
+            for (int j = 0; j < n; j++) {           // Traverse the entire array.
+                if (nums[j] == i) {                 // If current number is found
+                    count++;                        // Increase its frequency.
                 }
             }
 
-            if (secondElement == -1)                // If no missing number was found in the loop
-                secondElement = n;                  // then the missing number is the last number (n).
+            if (count == 2) {                       // Number appears twice.
+                repeating = i;                      // Store repeating number.
+            }
+
+            if (count == 0) {                       // Number does not appear.
+                missing = i;                        // Store missing number.
+            }
         }
 
-        ans.push_back(firstElement);                // Add the repeating number to the answer vector.
-        ans.push_back(secondElement);               // Add the missing number to the answer vector.
+        vector<int> ans;                            // Answer vector.
+
+        ans.push_back(repeating);                   // Add repeating number.
+        ans.push_back(missing);                     // Add missing number.
 
         return ans;                                 // Return [repeating, missing].
     }
 };
-
-
-
-
-
 
 
 int main() {
@@ -92,5 +81,5 @@ int main() {
 }
 
 
-// Time Complexity : O(N log N)
+// Time Complexity : O(N²)
 // Space Complexity : O(1)
