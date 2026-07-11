@@ -30,6 +30,7 @@ Repeat until found.
 This is Binary Search.
 --------------------------------------------------------------------------------------------------------------------------
 4. Linear Search vs Binary Search
+
 Linear Search	Binary Search
 Works on unsorted array	Requires sorted array
 Checks one by one	Eliminates half every step
@@ -62,6 +63,7 @@ Found.
 
 --------------------------------------------------------------------------------------------------------------------------
 6. Visualization
+
 1 3 5 7 9 11 13
 
 low             high
@@ -131,17 +133,12 @@ return -1;
 9. Why mid?
 
 Suppose
-
 low = 0
-
 high = 9
-
 Middle
-
 mid = 4
 
 Instead of checking
-
 0
 1
 2
@@ -154,7 +151,6 @@ Instead of checking
 9
 
 You immediately check
-
 4
 
 One comparison removes half the array.
@@ -163,70 +159,52 @@ One comparison removes half the array.
 10. Why Does It Work?
 
 Sorted array
-
 1 3 5 7 9 11 13
 
 Target
-
 11
 
 Since
-
 11 > 7
-
 Everything before
-
 7
 
 is also smaller.
-
 Therefore we safely ignore
-
 1 3 5 7
 
 --------------------------------------------------------------------------------------------------------------------------
 11. Binary Search Dry Run
 
-Array
+Array :1 3 5 7 9 11 13
 
-1 3 5 7 9 11 13
+Target :9
 
-Target
+Iteration 1 :
 
-9
-Iteration 1
 low=0
-
 high=6
-
 mid=3
 
 nums[mid]=7
 9>7
-
 Move
-
-low=4
-Iteration 2
 low=4
 
+Iteration 2 :
+low=4
 high=6
-
 mid=5
 
 nums[mid]=11
 9<11
-
 Move
-
 high=4
-Iteration 3
+
+Iteration 3 :
 low=4
-
 high=4
-
 mid=4
-
 nums[mid]=9
 
 Found.

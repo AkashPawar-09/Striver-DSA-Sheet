@@ -10,20 +10,19 @@ Output: -1
 Explanation: 2 does not exist in nums so return -1
 
 Input: arr[] = [1, 2, 3, 4, 6], k = 6
-Output: true
+Output: 4
 Exlpanation: Since, 6 is present in the array at index 4 (0-based indexing), output is true.
 
 
 Input: arr[] = [1, 2, 4, 5, 6], k = 3
-Output: false
+Output: -1
 Exlpanation: Since, 3 is not present in the array, output is false.
 
 
 Input: arr[] = [2, 3, 5, 6], k = 1
-Output: false
+Output: -1
 
 */
-
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -40,7 +39,7 @@ public:
 
         int mid = low +  (high - low) / 2;              // calculate mid 
 
-        if (nums[mid] == target)                        // if mid is target
+        if (nums[mid] == target)                        // if target found which is mid
             return mid;                                 // then return mid
 
         else if (target > nums[mid])                    // if target is greater than mid pointer

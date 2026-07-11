@@ -18,30 +18,18 @@ using namespace std;
 class Solution {
 public:
     int lowerBound(vector<int> arr, int n, int x) {
-
         int low = 0, high = n - 1;
-
         int ans = n;
-
         while (low <= high) {
-
             int mid = (low + high) / 2;
-
-            // Maybe an answer
             if (arr[mid] >= x) {
-
                 ans = mid;
-
-                // Look for a smaller index on the left
                 high = mid - 1;
             }
             else {
-
-                // Look on the right
                 low = mid + 1;
             }
         }
-
         return ans;
     }
 };
@@ -68,5 +56,5 @@ int main() {
 }
 
 
-// Time Complexity : 
-// Space Complexity : 
+// Time Complexity : O(log N)
+// Space Complexity : O(1)
