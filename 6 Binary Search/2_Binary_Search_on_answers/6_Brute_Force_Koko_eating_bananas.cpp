@@ -33,22 +33,22 @@ using namespace std;
 class Solution {
 public:
     int minEatingSpeed(vector<int>& piles, int h) {
-        int maxi = *max_element(piles.begin(), piles.end());        // find maximum number of banana's
+        int maxi = *max_element(piles.begin(), piles.end());    // find maximum number of banana's
 
-        for (int k = 1; k <= maxi; k++) {                           // 
+        for (int k = 1; k <= maxi; k++) {                       // iteration from 
 
-            int totalHours = 0;
+            int totalHours = 0;                                 // initiate totalHours to 0 everytime before loop
 
-            for (int pile : piles) {
-                totalHours = totalHours + (pile + k - 1) / k;
+            for (int pile : piles) {                            // foreach loop to count totalHours
+                totalHours = totalHours + (pile + k - 1) / k;   // totalHours Formula 
             }
 
-            if (totalHours <= h) {
-                return k;
+            if (totalHours <= h) {                              // if after loop totalHours <= h
+                return k;                                       // return that k value 
             }
         }
 
-        return maxi;
+        return maxi;                                            // otherwise return maxi (dafault)
     }
 };
 
