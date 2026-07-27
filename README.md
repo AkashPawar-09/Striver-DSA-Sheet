@@ -1,4 +1,4 @@
-# 🚀 Striver DSA Sheet
+# # Striver DSA Sheet
 
 This repository contains my solutions to the **Striver A2Z DSA Sheet** in **C++**, organized topic-wise from basic to advanced.
 
