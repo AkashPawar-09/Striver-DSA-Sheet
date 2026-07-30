@@ -61,6 +61,7 @@ public:
             slow = slow->next;                                      // Move slow by one node
             fast = fast->next->next;                                // Move fast by two nodes
         }
+        // when loop is completed slow pointer is at half of LL (integer division)
 
         ListNode* newHead = reverse(slow->next);                    // Reverse the second half of the list
 
