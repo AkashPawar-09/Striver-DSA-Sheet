@@ -42,6 +42,7 @@ So the answer should be: true
 
 -------------------------------------------------------------------------------------------------------------------- */
 
+// Question: Given n and k, check whether the K-th bit of n is 1.
 
 #include <bits/stdc++.h>
 using namespace std;

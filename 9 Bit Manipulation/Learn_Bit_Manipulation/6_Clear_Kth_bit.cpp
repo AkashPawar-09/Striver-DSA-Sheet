@@ -1,3 +1,5 @@
+// Question: Set the K-th bit of n to 0.
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -23,3 +25,15 @@ int main() {
 
 // Time Complexity: O(1)
 // Space Complexity: O(1)
+
+
+/*
+
+1 << 0 = 1
+1 << 1 = 2
+1 << 2 = 4
+1 << 3 = 8
+1 << 4 = 16
+1 << 5 = 32
+
+*/
