@@ -9,42 +9,35 @@ Explanation: Since the order of elements gets reversed the first element will oc
 */
 
 
-#include <bits/stdc++.h>
-using namespace std ;
+#include<bits/stdc++.h>
+using namespace std;
 
-class Solution{
+class Solution {
 public:
-    void reverse(int arr[], int n){
-        for(int i = 0; i < n/2; i++){
-            swap(arr[i], arr[n - i - 1]);
-        }
+    void reverseArray(vector<int>& nums, int left, int right) {
+        if (left >= right) {return;}
+        swap(nums[left], nums[right]);
+        reverseArray(nums, left + 1, right - 1);
     }
 };
 
 
-
-
 int main() {
+    Solution obj;
     int n;
     cin >> n;
-
-    int arr[n];
-    for(int i = 0; i < n; i++){
-        cin >> arr[i];
+    vector<int> nums(n);
+    for (int i = 0; i < n; i++) {
+        cin >> nums[i];
     }
-
-    Solution obj;
-    obj.reverse(arr, n); 
-    
-    for(int i = 0; i < n; i++){   // Printing 
-        cout << arr[i] << " ";
+    obj.reverseArray(nums, 0, n - 1);
+    for (int i = 0; i < n; i++) {
+        cout << nums[i] << " ";
     }
-
     return 0;
 }
 
 
 
-
-
-
+// Time Complexity: O(n)
+// Space Complexity: O(n)
