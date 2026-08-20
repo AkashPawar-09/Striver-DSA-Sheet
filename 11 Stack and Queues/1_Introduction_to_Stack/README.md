@@ -1,4 +1,4 @@
-# Stack — Basics to Implementation (C++)
+# Stack — (C++)
 
 ## 1. What is a Stack
 

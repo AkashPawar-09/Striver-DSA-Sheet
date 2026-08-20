@@ -1,4 +1,4 @@
-# Queue — Basics to Implementation (C++)
+# Queue - (C++)
 
 ## 1. What is a Queue
 
