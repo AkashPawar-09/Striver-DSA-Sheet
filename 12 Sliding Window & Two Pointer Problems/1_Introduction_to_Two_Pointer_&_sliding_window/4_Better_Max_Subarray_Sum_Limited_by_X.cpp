@@ -50,5 +50,5 @@ int main() {
 }
 
 
-// Time Complexity : O(N²)
+// Time Complexity : O(N)
 // Space Complexity : O(1)
