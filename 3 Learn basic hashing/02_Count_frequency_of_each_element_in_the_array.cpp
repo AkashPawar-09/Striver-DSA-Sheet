@@ -24,24 +24,17 @@ using namespace std;
 
 class Solution {
 public:
-    vector<vector<int>> countFrequencies(vector<int>& nums) {
-        
+    vector<vector<int>> countFrequencies(vector<int>& nums) {    
         int hash[100000 + 1] = {0};
-
-        // Count frequency
         for(int x : nums){
             hash[x]++;
         }
-
-        // Store result
         vector<vector<int>> result;
-
         for(int i = 0; i <= 100000; i++){
             if(hash[i] > 0){
                 result.push_back({i, hash[i]});
             }
         }
-
         return result;
     }
 };
@@ -62,70 +55,8 @@ int main() {
 
     // output
     for(auto &v : ans){
-        cout << v[0] << " " << v[1] << endl;
+        cout << v[0] << " " << v[1] << endl;        // v[0] = element & v[1] = occurance
     }
 
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-#include<bits/stdc++.h>
-using namespace std ;
-
-class Solution {
-public:
-    vector<vector<int>> countFrequencies(vector<int>& nums) {
-        
-        int hash[100000 + 1] = {0};
-
-        // Step 1: Count frequency
-        for(int x : nums){
-            hash[x]++;
-        }
-
-        // Step 2: Store result
-        vector<vector<int>> result;
-
-        for(int i = 0; i <= 100000; i++){
-            if(hash[i] > 0){
-                result.push_back({i, hash[i]});
-            }
-        }
-
-        return result;
-    }
-};
-
-
-int main() {
-    int n;
-    cin >> n;   // size of array
-
-    vector<int> nums(n);
-
-    // input array
-    for(int i = 0; i < n; i++){
-        cin >> nums[i];
-    }
-
-    Solution obj;
-    vector<vector<int>> ans = obj.countFrequencies(nums);
-
-    // output
-    for(auto &v : ans){
-        cout << v[0] << " " << v[1] << endl;
-    }
-
-    return 0;
-}
-
-
