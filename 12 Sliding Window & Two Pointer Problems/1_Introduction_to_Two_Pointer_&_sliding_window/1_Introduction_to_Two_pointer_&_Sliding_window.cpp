@@ -90,4 +90,35 @@ Common question patterns:
 
 QUESTIONS LINKS ARE IN README.md FILE | Cheak it out and Solve.....
 
+-------------------------------------------------------------------------------------------------------------------- 
+
+Difference :
+____________________________________________________________________________
+| Constant Window                    | Variable Window                     |
+| ---------------------------------- | ----------------------------------- |
+| Size is fixed                      | Size changes                        |
+| Given `k` = window size            | `k` is usually a condition          |
+| `i - k` used to remove old element | `left` moves according to condition |
+| Usually `if`                       | Usually `while`                     |
+| Example: max sum of size `k`       | Example: longest sum ≤ `k`          |
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+// THESE ARE NOT ONLY BRACKETS : [] ~ 3am
+
+
+CONSTANT WINDOW
+[  k  ]
+[  k  ]
+[  k  ]
+[  k  ]
+
+VARIABLE WINDOW
+[ ]
+[   ]
+[     ]
+[  ]
+[      ]
+
 -------------------------------------------------------------------------------------------------------------------- */
