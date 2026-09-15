@@ -42,7 +42,7 @@ These are the best ones to start with.
 
 > **Practice order:** `643 → 1343 → 1876 → 1423 → 2461 → 438 → 567 → 239`
 
-For example, 643 explicitly asks for a subarray whose length is exactly `k`, making it a very clean fixed-window problem. ([LeetCode][2])
+For example, 643 explicitly asks for a subarray whose length is exactly `k`, making it a very clean fixed-window problem. 
 
 ---
 
@@ -139,6 +139,6 @@ Once you finish the above, do these.
 30. **2958 — Length of Longest Subarray With at Most K Frequency**
     [LeetCode 2958](https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency/?utm_source=chatgpt.com)
 
-These problems cover the common progression from basic fixed windows to frequency maps, two-pointer shrinking, and more advanced window conditions. ([LeetCode][3])
+These problems cover the common progression from basic fixed windows to frequency maps, two-pointer shrinking, and more advanced 
 
 ---

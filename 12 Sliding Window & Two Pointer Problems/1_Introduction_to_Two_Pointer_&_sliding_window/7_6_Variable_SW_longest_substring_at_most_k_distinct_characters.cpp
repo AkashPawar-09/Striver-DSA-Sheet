@@ -49,7 +49,23 @@ using namespace std ;
 class Solution {
 public:
     int longestSubstring(string s, int k) {
-        
+        int n = s.size() ;
+        int i = 0 ;
+        int maxLength = 0 ;
+        unordered_map<char,int> freq ;
+
+        for(int j = 0 ; j < n ; j++) {
+            freq[s[j]]++;                   // store frequency of each char like <alphabet,occurance> 
+            while(freq[s[j]] > k){          // if element have freq more than K (repeated character)
+                freq[s[i]]--;               // then decrease frequency of leftmost element
+                if (freq[s[i]] == 0) {      // until frequency becomes 0
+                    freq.erase(s[i]);       // when its frequency becomes 0 , remove that char
+                }
+                i++;                        // increse leftmost pointer to get new char
+            }
+            maxLength = max(maxLength , j-i+1 ) ;   // calculate max Length of substring
+        }
+        return maxLength ;
     }
 };
 
