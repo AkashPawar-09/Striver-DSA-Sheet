@@ -41,7 +41,6 @@ class Solution{
             right++;
         }
         return count;
-
     }
 };
 
@@ -62,5 +61,4 @@ int main() {
 }
 
 // Time Complexity: O(N log N)
-
 // Space Complexity:O(N)
