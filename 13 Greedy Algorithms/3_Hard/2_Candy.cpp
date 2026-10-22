@@ -24,9 +24,10 @@ public:
             }
         }
 
-        // 2nd loop is mainly used for examples like : 
-        // nums = [60,80,100,100,100,100,100] , output is 10
-        // ans => [1 ,2 , 3 , 1 , 1 , 1 , 1 ]
+        // Example where the second loop is necessary:
+        // nums = [3,2,1]
+        // After the first loop:  [1,1,1]
+        // After the second loop: [3,2,1]
 
         int sum = 0 ;
         for(int i = 0 ; i < n ; i++){
