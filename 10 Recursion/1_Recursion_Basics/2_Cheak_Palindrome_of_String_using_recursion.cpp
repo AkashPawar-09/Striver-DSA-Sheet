@@ -1,6 +1,17 @@
+/*
+
+Input: Str =  “ABCDCBA”
+Output: Palindrome
+Explanation: String when reversed is the same as string.
+
+Input: Str = “TAKE U FORWARD”
+Output: Not Palindrome
+Explanation: String when reversed is not the same as string.
+
+*/
+
 #include <iostream>
 using namespace std;
-
 
 class Solution {
 public:
@@ -11,6 +22,22 @@ public:
     }
 };
 
+
+/*  without Recursion 
+
+class Solution{	
+public:		
+	bool isPalindrome(string& s){
+		string s2 = s ;
+        int n = s.length() ;
+        for(int i = 0; i < n/2; i++){
+            swap(s[i], s[n - i - 1]);
+        }
+        return s==s2 ;
+	}
+};
+
+*/
 
 int main() {
     string s;

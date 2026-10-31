@@ -2,7 +2,6 @@
 using namespace std;
 
 
-
 class Solution {
 public:
     void generate(vector<int>& nums, int index, vector<int>& current) {
@@ -13,6 +12,7 @@ public:
             cout << endl;
             return;
         }
+        
         // Include
         current.push_back(nums[index]);
         generate(nums, index + 1, current);         // this function will call till index == 3 
