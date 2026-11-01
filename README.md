@@ -8,12 +8,12 @@ The main objective of this repository is to build strong problem-solving skills,
 
 ## # Highlights
 
--  Topic-wise solutions following the **Striver A2Z DSA Sheet**
--  Solutions written in **C++**
--  Clean, optimized, and easy-to-read code
--  **Almost every important question contains detailed comments** explaining the intuition, approach, and logic for better understanding.
--  Great for revision and interview preparation
--  Repository is updated regularly as I progress through the sheet
+- Topic-wise solutions following the **Striver A2Z DSA Sheet**
+- Solutions written in **C++**
+- Clean, optimized, and easy-to-read code
+- **Almost every important question contains detailed comments** explaining the intuition, approach, and logic for better understanding.
+- Great for revision and interview preparation
+- Repository is updated regularly as I progress through the sheet
 
 ---
 
@@ -32,11 +32,13 @@ The main objective of this repository is to build strong problem-solving skills,
 10 Recursion
 11 Stack and Queues
 12 Sliding Window & Two Pointer Problems
+13 Greedy Algorithms
 ```
 
 ---
-# Repository Structure
- 
+
+## # Repository Structure
+
 ```
 Striver-DSA-Sheet/
 │
@@ -86,7 +88,11 @@ Striver-DSA-Sheet/
 │
 ├── 10 Recursion/
 │   ├── 1_Recursion_Basics/
-│   └── 2_Subsequences_Pattern/
+│   ├── 2_Subsequences_Pattern/
+│   ├── 3_Medium_Questions/
+│   ├── 4_Hard_Questions/
+│   ├── 5_Hard_FAQs_Questions/
+│   └── 6_Extra_Recursion_Questions/
 │
 ├── 11 Stack and Queues/
 │   ├── 1_Introduction_to_Stack/
@@ -95,20 +101,21 @@ Striver-DSA-Sheet/
 │   ├── 4_Infix_Postfix_and_Prefix_Converstion_Problems/
 │   └── 5_Monotonic_Stack_Queue_Problems/
 │
-└── 12 Sliding Window & Two Pointer Problems/
-    ├── 1_Introduction_to_Two_Pointer_&_sliding_window/
-    ├── 2_Medium_Problems_of_SW_&_TP/
-    └── 3_Hard_Problems_of_SW_&_TP/
+├── 12 Sliding Window & Two Pointer Problems/
+│   ├── 1_Introduction_to_Two_Pointer_&_sliding_window/
+│   ├── 2_Medium_Problems_of_SW_&_TP/
+│   └── 3_Hard_Problems_of_SW_&_TP/
+│
+└── 13 Greedy Algorithms/
+    ├── 1_Easy/
+    ├── 2_Scheduling_and_Interval_Problems/
+    ├── 3_Hard/
+    ├── 4_Greedy_from_freeCodeCamp/
+    └── 5_Greedy_Extra_Leet_Problems/
 ```
- 
-# Code Style
- 
-* Meaningful variable and function names
-* Comments for intuition, approach, and edge cases
-* Brute force to optimal progression where useful
-* Consistent formatting across all files
 
 ---
+
 ## # Goal
 
 - Complete the entire **Striver A2Z DSA Sheet**
@@ -116,16 +123,7 @@ Striver-DSA-Sheet/
 - Learn optimal approaches for interview questions
 - Stay consistent with daily DSA practice
 
-> **"Consistency beats intensity."**
-
----
-
-## # Code Style
- 
-* Meaningful variable and function names
-* Comments for intuition, approach, and edge cases
-* Brute force to optimal progression where useful
-* Consistent formatting across all files
+> **"Consistency beats intensity." 🚀**
 
 ---
 
@@ -141,5 +139,4 @@ If you have a better approach, optimization, or explanation, feel free to open a
 
 ## # Acknowledgement
 
-A big thanks to **Striver (Raj Vikramaditya)** and **TakeUForward** for creating such an amazing DSA roadmap and helping thousands of students prepare for coding interviews. 
-
+A big thanks to **Striver (Raj Vikramaditya)** and **TakeUForward** for creating such an amazing DSA roadmap and helping thousands of students prepare for coding interviews.
